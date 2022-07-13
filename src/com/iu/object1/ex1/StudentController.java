@@ -11,6 +11,13 @@ public class StudentController {
 	public void start() {
 		Scanner sc = new Scanner(System.in);
 		
+		StudentView sv = new StudentView();
+		
+		StudentService sts = new StudentService();
+		
+		Student [] students  = null;
+		
+		
 		boolean check = true;
 		
 		while(check) {
@@ -25,12 +32,20 @@ public class StudentController {
 		switch (select) {
 			case 1: 
 				System.out.println("1");
+				students = sts.makeStudents();
 				break;
 			case 2:
 				System.out.println("2");
+				sv.viewAll(students);
 				break;
 			case 3:
 				System.out.println("3");
+				Student student = sts.findStudent(students);
+				if(student != null) {
+					sv.viewOne(student);
+				}else {
+					sv.viewMessage("찾는 학생번호가 없습니다");
+				}
 				break;
 			case 4:
 				System.out.println("4");
@@ -39,7 +54,7 @@ public class StudentController {
 				System.out.println("5");
 				break;
 				
-				default:
+			default:
 					System.out.println("종료중");
 					check=!check;
 			}
