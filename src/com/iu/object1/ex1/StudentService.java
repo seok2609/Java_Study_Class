@@ -20,10 +20,10 @@ public class StudentService {
 		
 		for(int i=0;i<student.length;i++) {
 			String [] nameCopy = new String [student.length+1]; //학생 이름 배열
-			int [] numCopy = new int [nameCopy.length];     //학생 번호 배열 
-			int [] korCopy = new int [nameCopy.length];     //국어 점수 배열
-			int [] engCopy = new int [nameCopy.length];     //영어 점수 배열
-			int [] mathCopy = new int [nameCopy.length];    //수학 점수 배열
+			int [] numCopy = new int [nameCopy.length];   	  //학생 번호 배열 
+			int [] korCopy = new int [nameCopy.length];  	   //국어 점수 배열
+			int [] engCopy = new int [nameCopy.length];  	   //영어 점수 배열
+			int [] mathCopy = new int [nameCopy.length];  	  //수학 점수 배열
 
 			
 			//학생 한명 추가
@@ -41,6 +41,20 @@ public class StudentService {
 		return student;
 		
 	
+	}
+	
+	//removeStudent
+	//학생들의 정보를 받아서
+	//삭제하려는 학생의 번호를 입력 받음
+	//학생의 번호와 일치하는 학생을 삭제
+	//남은 학생정보들을 리턴
+	
+	public void removeStudent (Student [] student) {
+		
+		for(int i=0;i<student.length;i++) {
+			
+		}
+		
 	}
 	
 	//findStudent
