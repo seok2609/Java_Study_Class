@@ -4,19 +4,27 @@ import java.util.Scanner;
 
 public class StudentController {
 	
+	Scanner sc;
+	StudentView sv;
+	StudentService sts;
+	Student [] students;
 	
-	//start 메서드를 선언
+	
+	
+	public StudentController() {
+		sc = new Scanner(System.in);
+		sv = new StudentView();
+		sts = new StudentService();
+		
+	}
+	
 
-	
+	//start 메서드를 선언
 	public void start() {
-		Scanner sc = new Scanner(System.in);
-		
-		StudentView sv = new StudentView();
-		
-		StudentService sts = new StudentService();
-		
-		Student [] students  = null;
-		
+//		Scanner sc = new Scanner(System.in);
+//		StudentView sv = new StudentView();
+//		StudentService sts = new StudentService();
+//		Student [] students  = null;
 		
 		boolean check = true;
 		
@@ -52,6 +60,7 @@ public class StudentController {
 				break;
 			case 5:
 				System.out.println("5");
+				sts.addStudent(students);
 				break;
 				
 			default:
