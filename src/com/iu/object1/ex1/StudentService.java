@@ -57,7 +57,7 @@ public class StudentService {
 		Student student = null;
 		
 		for(int i=0;i<students.length;i++) {
-			if(num==students[i].num) {
+			if(num==students[i].getNum()) {
 				student=students[i];
 //				return student;       //break; 대신 사용가능
 				break;
@@ -81,18 +81,19 @@ public class StudentService {
 		for(int i=0;i<students.length;i++) {
 			Student student = new Student();
 			System.out.println("이름 입력");
-			student.name=sc.next();
+			student.setName(sc.next());
 			System.out.println("번호 입력");
-			student.num=sc.nextInt();
+			student.setNum(sc.nextInt());
 			System.out.println("국어점수 입력");
-			student.kor=sc.nextInt();
+			student.setKor(sc.nextInt());
 			System.out.println("영어점수 입력");
-			student.eng = sc.nextInt();
+			student.setEng(sc.nextInt());
 			System.out.println("수학점수 입력");
-			student.math=sc.nextInt();
+			student.setMath(sc.nextInt());
 			student.setTotal();
 //			student.total=student.kor+student.eng+student.math;
 //			student.avg=student.total/3.0;
+			
 			students[i]=student;
 		}
 		

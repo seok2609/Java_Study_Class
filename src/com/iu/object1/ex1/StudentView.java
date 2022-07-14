@@ -14,13 +14,13 @@ public class StudentView {
 	//학생 한명의 정보를 받아서 모든 정보를 출력 
 	
 	public void viewOne(Student student) {
-			System.out.println(student.name);
-			System.out.println(student.num);
-			System.out.println(student.kor);
-			System.out.println(student.eng);
-			System.out.println(student.math);
-			System.out.println(student.total);
-			System.out.println(student.avg);
+			System.out.println(student.getName());
+			System.out.println(student.getNum());
+			System.out.println(student.getKor());
+			System.out.println(student.getEng());
+			System.out.println(student.getMath());
+			System.out.println(student.getTotal());
+			System.out.println(student.getAvg());
 	}
 	
 	//viewAll 메서드 생성
@@ -31,13 +31,13 @@ public class StudentView {
 	
 	public void viewAll(Student [] students) {
 		for(int i=0;i<students.length;i++) {
-			System.out.println(students[i].name);
-			System.out.println(students[i].num);
-			System.out.println(students[i].kor);
-			System.out.println(students[i].eng);
-			System.out.println(students[i].math);
-			System.out.println(students[i].total);
-			System.out.println(students[i].avg);
+			System.out.println(students[i].getName());
+			System.out.println(students[i].getNum());
+			System.out.println(students[i].getKor());
+			System.out.println(students[i].getEng());
+			System.out.println(students[i].getMath());
+			System.out.println(students[i].getTotal());
+			System.out.println(students[i].getAvg());
 			
 		}
 		
